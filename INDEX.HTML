@@ -1,10 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mythily Kanagaraj • Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Mythily Kanagaraj — Cloud & AI/ML Engineer and MS student in AI & Business Analytics at USF.">
 </head>
 <body>
-  <h1>Welcome to My Portfolio</h1>
-  <p>This is my GitHub Pages site.</p>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#top">Mythily</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero" id="top">
+      <h1>Hi, I’m Mythily Kanagaraj</h1>
+      <p class="subtitle">
+        Graduate student in AI & Business Analytics (USF) with experience as a Cloud & AI/ML Engineer.
+        I work on scalable data pipelines, ML model deployment, and BI dashboards for data-driven decisions. :contentReference[oaicite:1]{index=1}
+      </p>
+      <a class="btn" href="#projects">See my work</a>
+    </section>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I’m pursuing my MS in Artificial Intelligence & Business Analytics at the University of South Florida.
+        My background includes building ETL/ELT data pipelines on AWS/Azure, deploying models with
+        TensorFlow/Keras/scikit-learn, and creating Tableau/Power BI dashboards for real-time monitoring
+        and analytics. :contentReference[oaicite:2]{index=2}
+      </p>
+      <p>
+        I enjoy turning messy data into clear insights and production-ready apps.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card">
+          <img src="assets/project1.png" alt="Mental Health Emotion Detection chatbot screenshot" />
+          <h3>Mental Health Emotion Detection Chatbot</h3>
+          <p>
+            LSTM-based NLP model (TensorFlow/Keras) for multi-class emotion classification, deployed with Streamlit
+            (Hugging Face Spaces) for real-time interaction. Includes NLP preprocessing and tuned training pipeline. :contentReference[oaicite:3]{index=3}
+          </p>
+          <a class="link" target="_blank" href="#">View Repository</a>
+          <a class="link" target="_blank" href="#">Live Demo</a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card">
+          <img src="assets/project2.png" alt="Retail Customer Insights dashboard screenshot" />
+          <h3>Retail Customer Insights Dashboard</h3>
+          <p>
+            Interactive Tableau dashboard powered by Python preprocessing and SQL pipelines for segmentation, trend analysis,
+            and demand forecasting. Dynamic KPIs (loyalty, purchase frequency, revenue). :contentReference[oaicite:4]{index=4}
+          </p>
+          <a class="link" target="_blank" href="#">View Repository</a>
+          <a class="link" target="_blank" href="#">Tableau/Report</a>
+        </article>
+
+        <!-- Optional Project 3 -->
+        <article class="card">
+          <img src="assets/project3.png" alt="Cloud Security & Compliance Monitoring dashboard" />
+          <h3>Cloud Security & Compliance Monitoring</h3>
+          <p>
+            Secure AWS stack (EC2, S3, RDS, Lambda, VPC) with automated compliance tracking and real-time anomaly detection,
+            visualized in Tableau for stakeholder decisions. :contentReference[oaicite:5]{index=5}
+          </p>
+          <a class="link" target="_blank" href="#">View Repository</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li><strong>AI/ML & Modeling:</strong> TensorFlow, Keras, PyTorch, scikit-learn, NLP, Predictive Modeling, MLOps, Hugging Face :contentReference[oaicite:6]{index=6}</li>
+        <li><strong>Programming:</strong> Python (Pandas, NumPy, NLTK), SQL, PL/SQL :contentReference[oaicite:7]{index=7}</li>
+        <li><strong>Cloud & Data Engineering:</strong> AWS (EC2, S3, Lambda, CloudWatch, CloudFormation, Terraform), Azure, Snowflake, ETL/ELT :contentReference[oaicite:8]{index=8}</li>
+        <li><strong>Visualization & BI:</strong> Tableau, Power BI, Looker; DAX, Power Query, RLS :contentReference[oaicite:9]{index=9}</li>
+        <li><strong>Databases:</strong> MS SQL Server, MySQL, Oracle :contentReference[oaicite:10]{index=10}</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p> <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a></p>
+      <p> <a target="_blank" href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200">LinkedIn</a></p>
+      <p> <a target="_blank" href="#">GitHub</a></p>
+      <p> +1 813 323 3780</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Mythily Kanagaraj • Built with HTML/CSS</p>
+  </footer>
+
+  <script>
+    // tiny enhancement (also useful to mention in your Step 3 AI/automation notes)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
