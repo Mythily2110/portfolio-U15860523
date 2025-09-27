@@ -1,61 +1,99 @@
-/* ======= Mythily overrides (light theme + Times New Roman) ======= */
-
-/* 1) Font */
-html { font-family: "Times New Roman", Times, serif; }
-
-/* 2) Light palette (only variables; rest of the file keeps working) */
+/* ===== Theme (light, centered header), Times New Roman ===== */
 :root{
-  /* base surface colors */
-  --smoky-black: hsl(0, 0%, 98%);         /* page background */
-  --eerie-black-2: hsl(0, 0%, 100%);      /* cards/sections */
-  --eerie-black-1: hsl(0, 0%, 100%);      /* inner surfaces */
-  --onyx: hsl(0, 0%, 96%);                /* subtle fills */
-  --jet: hsl(0, 0%, 88%);                 /* borders */
+  /* Choose ONE accent:
+     --accent: #3aa7ff;            /* light blue (default) */
+  --accent: #3aa7ff;
+  /* To use olive instead, comment the line above and uncomment below */
+  /* --accent: #7a9e3d; */         /* olive green */
 
-  /* text colors */
-  --white-2: hsl(222, 47%, 11%);          /* headings (dark) */
-  --white-1: hsl(222, 20%, 28%);          /* badges/labels */
-  --light-gray: hsl(222, 15%, 35%);       /* body text */
-  --light-gray-70: hsla(222, 15%, 35%, .7);
-
-  /* accent (sky blue + warm gold) */
-  --orange-yellow-crayola: hsl(199, 92%, 45%);   /* primary accent */
-  --vegas-gold: hsl(35, 64%, 50%);
-
-  /* gradients re-tinted for light UI */
-  --bg-gradient-onyx: linear-gradient(to bottom right, #f6fafe 0%, #ffffff 100%);
-  --bg-gradient-jet:  linear-gradient(to bottom right, #ffffff 0%, #f7f7f9 100%), #ffffff;
-  --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(199, 92%, 45%) 0%, hsla(199, 92%, 45%, 0) 60%);
-  --bg-gradient-yellow-2: linear-gradient(135deg, hsla(199, 92%, 45%, .18) 0%, hsla(199, 92%, 45%, 0) 60%), #ffffff;
-  --border-gradient-onyx: linear-gradient(to bottom right, #e7ebf0 0%, rgba(231,235,240,0) 50%);
-  --text-gradient-yellow: linear-gradient(to right, hsl(199, 92%, 45%), hsl(35, 100%, 60%));
-
-  /* softened shadows for light mode */
-  --shadow-1: 0 6px 18px rgba(16, 24, 40, 0.08);
-  --shadow-2: 0 10px 24px rgba(16, 24, 40, 0.08);
-  --shadow-3: 0 14px 32px rgba(16, 24, 40, 0.10);
-  --shadow-4: 0 18px 40px rgba(16, 24, 40, 0.08);
-  --shadow-5: 0 24px 60px rgba(16, 24, 40, 0.10);
+  --bg: #f7fbff;                   /* page background */
+  --panel: #ffffff;                /* cards/header */
+  --text: #1f2937;                 /* primary text */
+  --muted: #4b5563;                /* secondary text */
+  --border: #e5e7eb;               /* borders */
+  --shadow: 0 14px 40px rgba(2, 6, 23, .06);
 }
 
-/* 3) Small tweaks so light mode reads well */
-.navbar{
-  background: rgba(255,255,255,.8);
-  border-color: var(--jet);
-  backdrop-filter: blur(10px);
+*{box-sizing:border-box}
+html,body{margin:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Times New Roman", Times, serif;
+  line-height:1.6;
 }
-.navbar-link{ color: var(--light-gray); }
-.navbar-link.active{ color: var(--orange-yellow-crayola); }
 
-.article-title::after{ background: var(--text-gradient-yellow); }
-.project-item-icon-box{ background:#eaf2ff; color:#0b6bbf; }
+/* headings */
+.h1,.h2,.h3,h1,h2,h3,h4{font-family:"Times New Roman", Times, serif; margin:0 0 10px}
+.h1{font-size:2.1rem}
+.h2{font-size:1.6rem}
 
-/* Map: remove invert used for dark mode */
-.mapbox iframe{ filter: none; }
+/* links & buttons */
+a{color:var(--accent); text-decoration:none}
+a:hover{opacity:.9}
+.btn{
+  display:inline-block; padding:10px 14px; border-radius:12px;
+  background:var(--accent); color:#fff; font-weight:bold; box-shadow:var(--shadow)
+}
+.btn.ghost{
+  background:transparent; color:var(--accent); border:1px solid var(--accent)
+}
 
-/* Inputs look better on light */
-.form-input{
-  color: var(--white-2);
-  background: #fff;
-  border-color: var(--jet);
+/* header */
+.header{
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow);
+  position:sticky; top:0; z-index:10;
+}
+.wrap{
+  max-width:1100px; margin:0 auto; padding:18px;
+  display:flex; flex-direction:column; align-items:center; gap:16px;
+}
+.brand{text-align:center}
+.brand h1{font-size:2.2rem; letter-spacing:.3px}
+.tagline{margin-top:4px; color:var(--muted)}
+
+/* nav */
+.nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
+.nav a{
+  padding:8px 12px; border-radius:12px; border:1px solid var(--border);
+  color:var(--text); background:#fff
+}
+.nav a.active, .nav a:hover{border-color:var(--accent); color:var(--accent)}
+
+/* layout */
+.container{max-width:1100px; margin:0 auto; padding:28px 18px}
+.section{margin:22px 0}
+.hero{text-align:center}
+.lead{color:var(--muted); max-width:900px; margin:0 auto}
+
+/* cards & grid */
+.card{
+  background:var(--panel); border:1px solid var(--border); border-radius:16px;
+  padding:22px; box-shadow:var(--shadow)
+}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+
+/* tags */
+.tags{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+.tags span{
+  font-size:14px; padding:6px 10px; border:1px solid var(--border);
+  border-radius:999px; color:var(--muted); background:#fff
+}
+.tags.big span{font-size:15px; padding:8px 12px}
+
+/* actions */
+.actions{margin-top:10px; display:flex; gap:10px; flex-wrap:wrap}
+
+/* footer */
+.footer{
+  margin-top:20px; background:var(--panel); color:var(--muted);
+  border-top:1px solid var(--border); text-align:center; padding:18px
+}
+
+/* small screens */
+@media (max-width:520px){
+  .brand h1{font-size:1.8rem}
 }
