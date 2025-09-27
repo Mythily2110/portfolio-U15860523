@@ -1,123 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mythily Kanagaraj — Portfolio</title>
+  <title>Mythily Kanagaraj — AI & Business Analytics Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Mythily Kanagaraj — AI & Business Analytics Portfolio" />
 </head>
 <body>
 
-  <!-- ===== Header (centered brand + tagline + nav) ===== -->
-  <header class="header">
-    <div class="wrap">
-      <div class="brand">
-        <h1>Mythily Kanagaraj</h1>
-        <p class="tagline">AI &amp; Business Analytics Portfolio</p>
-      </div>
+  <!-- Header / Site Title (CENTERED) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Mythily Kanagaraj</h1>
+      <p class="site-subtitle">AI &amp; Business Analytics Portfolio</p>
 
       <nav class="nav">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="home" class="container">
-    <!-- ===== Hero / Intro (centered) ===== -->
-    <section class="section hero">
-      <h2 class="h1">Welcome</h2>
-      <p class="lead">
-        I’m a graduate student in <strong>Artificial Intelligence &amp; Business Analytics</strong> (USF),
-        experienced in building <strong>ETL/ELT pipelines</strong>, deploying <strong>ML/NLP models</strong>,
-        and creating <strong>Tableau/Power BI</strong> dashboards that turn data into decisions.
+  <!-- Main -->
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="card hero">
+      <p class="eyebrow">Welcome</p>
+      <h2 class="hero-title">Turning Data into Decisions</h2>
+
+      <p class="hero-lead">
+        I’m a data &amp; AI professional focused on building practical analytics solutions.  
+        Currently pursuing my <strong>MS in Artificial Intelligence &amp; Business Analytics (USF)</strong>,  
+        I work across <strong>ML/NLP</strong>, <strong>cloud data pipelines</strong>, and <strong>BI dashboards</strong>.
       </p>
+
+      <div class="cta-row">
+        <a class="btn" href="projects.html">See Projects</a>
+        <a class="btn outline" href="about.html">About Me</a>
+      </div>
+
+      <!-- Summary stats — shown as horizontal chips (not stacked) -->
+      <div class="chip-row" aria-label="Quick summary">
+        <span class="chip"><strong>Cloud/AI Experience:</strong> 2+ years</span>
+        <span class="chip"><strong>Dashboards Built:</strong> 10+</span>
+        <span class="chip"><strong>ML/NLP Models:</strong> 6</span>
+      </div>
+
+      <!-- Skills (kept as chips you liked) -->
+      <div class="chip-row subdued" aria-label="Key skills">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">Keras</span>
+        <span class="chip">NLP</span>
+        <span class="chip">AWS</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">Power BI</span>
+      </div>
     </section>
 
-    <!-- ===== About ===== -->
-    <section id="about" class="section card">
-      <h3 class="h2">About Me</h3>
-      <p>
-        I work across <strong>AWS &amp; Azure</strong>, <strong>Python/SQL</strong>, and <strong>business intelligence</strong>.
-        My focus is delivering production-ready analytics: from data engineering and model deployment to clear dashboard stories for stakeholders.
-      </p>
-    </section>
-
-    <!-- ===== Projects ===== -->
-    <section id="projects" class="section">
-      <h3 class="h2">Featured Projects</h3>
-
+    <!-- Featured Projects -->
+    <section class="section">
+      <h3 class="section-title">Featured Projects</h3>
       <div class="grid">
-        <!-- Project 1 -->
         <article class="card">
           <h4>Mental Health Emotion Detection Chatbot</h4>
           <p>
-            LSTM-based NLP model that predicts emotions from text; deployed with Streamlit (Hugging Face Spaces).
+            LSTM-based NLP model predicting emotions from text input. Deployed with Streamlit on
+            Hugging Face Spaces for fast, interactive inference.
           </p>
           <div class="tags">
             <span>NLP</span><span>TensorFlow</span><span>Keras</span><span>Streamlit</span>
           </div>
-          <p class="actions">
-            <a class="btn" target="_blank"
-               href="https://www.linkedin.com/feed/update/urn:li:activity:7363748293010444289/">View Project</a>
-            <a class="btn ghost" target="_blank" href="https://lnkd.in/g6VnvT8j">View Code</a>
+          <p>
+            <a class="btn small" target="_blank" href="https://lnkd.in/gsFXy9fq">Live Demo</a>
+            <a class="btn outline small" target="_blank" href="https://lnkd.in/g6VnvT8j">View Code</a>
           </p>
         </article>
 
-        <!-- Project 2 -->
         <article class="card">
           <h4>Retail Customer Insights Dashboard</h4>
           <p>
-            Executive Tableau dashboard highlighting purchase patterns, shipping preferences, and loyalty gaps.
+            Executive Tableau dashboard highlighting purchase behavior, shipping preferences,
+            and loyalty gaps to support retention strategy.
           </p>
           <div class="tags">
             <span>Tableau</span><span>Python</span><span>SQL</span>
           </div>
-          <p class="actions">
-            <a class="btn ghost" target="_blank"
-               href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View Dashboard</a>
+          <p>
+            <a class="btn outline small" target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View Dashboard</a>
           </p>
         </article>
       </div>
     </section>
 
-    <!-- ===== Skills ===== -->
-    <section id="skills" class="section card">
-      <h3 class="h2">Skills</h3>
-      <div class="tags big">
-        <span>Python</span><span>SQL</span><span>TensorFlow</span><span>Keras</span>
-        <span>NLP</span><span>Tableau</span><span>Power&nbsp;BI</span>
-        <span>AWS</span><span>Azure</span><span>ETL/ELT</span>
-      </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="section card">
-      <h3 class="h2">Contact</h3>
-      <p>Email: <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a></p>
-      <p>LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200">mythily-kanagaraj-474b37200</a></p>
-      <p>GitHub: <a target="_blank" href="https://github.com/Mythily2110">Mythily2110</a></p>
-      <p>Location: Tampa, Florida, USA</p>
-    </section>
   </main>
 
-  <footer class="footer">
-    © <span id="year"></span> Mythily Kanagaraj
+  <!-- Footer -->
+  <footer class="site-footer">
+    © <script>document.write(new Date().getFullYear())</script> Mythily Kanagaraj
   </footer>
-
-  <script>
-    // highlight active nav on click + smooth scrolling
-    document.querySelectorAll('.nav a').forEach(a=>{
-      a.addEventListener('click', e=>{
-        document.querySelectorAll('.nav a').forEach(n=>n.classList.remove('active'));
-        e.currentTarget.classList.add('active');
-      });
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
