@@ -1,153 +1,109 @@
-/* =============  THEME (Olive / Leaf)  ============= */
-:root{
-  --bg:#f7faf7;          /* very light leaf */
-  --panel:#ecf3ec;       /* header/footer strip */
-  --card:#ffffff;        /* cards */
-  --text:#1b1f1b;        /* primary text */
-  --muted:#475a47;       /* secondary text */
-  --accent:#4b7f2a;      /* OLIVE GREEN */
-  --accent-2:#7fb27a;    /* lighter leaf */
-  --border:#d7e5d7;      /* soft borders */
-  --shadow:0 10px 30px rgba(22, 38, 22, .08);
+/* Olive Green Theme */
+:root {
+  --primary: #556B2F;   /* Olive green */
+  --secondary: #3d4d20; /* Darker olive */
+  --text: #222;
+  --background: #fdfdf9;
+  --white: #fff;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0}
-body{
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-  font-family:"Times New Roman", Times, serif;
+/* Reset */
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-/* Links */
-a{color:var(--accent); text-decoration:none}
-a:hover{opacity:.92}
-
-/* ===== Header (centered) ===== */
-.site-header{
-  background:var(--panel);
-  border-bottom:1px solid var(--border);
-  box-shadow:var(--shadow);
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--primary);
+  color: var(--white);
 }
-.header-inner{
-  max-width:1100px; margin:0 auto;
-  padding:28px 16px;
-  text-align:center;
-}
-.site-title{
-  margin:0;
-  font-size:2.4rem;
-  letter-spacing:.3px;
-  color:var(--accent);
-}
-.site-subtitle{
-  margin:6px 0 16px;
-  color:var(--muted);
-  font-size:1rem;
-}
+.site-title { font-size: 2.5rem; margin-bottom: 0.25rem; }
+.site-subtitle { font-size: 1rem; opacity: 0.9; }
 
 /* Nav */
-.nav a{
-  display:inline-block;
-  margin:0 8px;
-  padding:8px 14px;
-  border:1px solid var(--border);
-  background:#fff;
-  border-radius:8px;
-  color:var(--accent);
-  font-weight:bold;
-  transition:background .25s, color .25s, border-color .25s;
+.nav {
+  margin-top: 1rem;
 }
-.nav a.active,
-.nav a:hover{
-  background:var(--accent);
-  color:#fff;
-  border-color:var(--accent);
+.nav a {
+  margin: 0 0.75rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav a.active, .nav a:hover {
+  border-bottom: 2px solid var(--white);
 }
 
-/* ===== Layout / Cards ===== */
-.container{max-width:1100px; margin:0 auto; padding:26px 16px}
-.section{margin:22px 0}
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:24px;
-  margin-bottom:20px;
-  box-shadow:var(--shadow);
-}
-.eyebrow{
-  text-transform:uppercase;
-  letter-spacing:.15em;
-  color:var(--muted);
-  font-size:.8rem;
-  margin:0 0 6px;
-}
-h2,h3,h4{color:var(--accent)}
-.lead{color:var(--text)}
-
-/* Buttons */
-.btn{
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:10px;
-  background:var(--accent);
-  color:#fff; font-weight:bold;
-  margin:8px 6px 6px 0;
-  border:2px solid var(--accent);
-}
-.btn.outline{
-  background:transparent;
-  color:var(--accent);
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
-/* Chips (skills / tags) */
-.chip-row{
-  display:flex; flex-wrap:wrap; gap:10px;
-  justify-content:flex-start; margin-top:6px;
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.chip{
-  padding:6px 12px; border-radius:999px;
-  background:var(--panel); color:var(--text);
-  border:1px solid var(--border);
-  font-size:.92rem;
+.hero-title {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
 }
-.chip-row.center{justify-content:center}
-.chip-row.subdued .chip{
-  background:#f1f6f1; color:var(--muted);
+.hero-lead { margin-bottom: 1.5rem; }
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0.2rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 4px;
+  text-decoration: none;
+}
+.btn.outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
 }
 
-/* Tag pills in project cards */
-.tags{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
-.tags span{
-  font-size:.85rem; padding:6px 10px; border-radius:999px;
-  border:1px solid var(--border); color:var(--muted); background:#f7fbf7;
+/* Cards */
+.card {
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
 }
-
-/* Grid */
-.grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px}
-
-/* Lists */
-.clean-list{margin:0; padding-left:18px}
-.clean-list li{margin:6px 0}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.tags span {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.2rem 0.5rem;
+  margin: 0.2rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
 
 /* Footer */
-.site-footer{
-  background:var(--panel);
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  text-align:center;
-  padding:20px; margin-top:20px;
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: var(--secondary);
+  color: var(--white);
 }
-
-/* Contact form (optional non-email) */
-.form{
-  display:grid; gap:12px; max-width:640px;
-}
-input, textarea{
-  width:100%; padding:12px 14px; border-radius:8px;
-  border:1px solid var(--border); background:#fff; color:var(--text);
-  font-family:"Times New Roman", Times, serif;
-}
-textarea{min-height:120px; resize:vertical}
