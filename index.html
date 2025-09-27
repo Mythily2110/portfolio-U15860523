@@ -3,130 +3,246 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mythily Kanagaraj • Portfolio</title>
-  <!-- Google Fonts -->
+  <title>Mythily Kanagaraj • Academic Portfolio</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Academic CV add-on (safe to keep here or move into style.css) ===== */
+    :root{
+      --bg:#0b1020; --panel:#0f172a; --text:#e6e6e6; --muted:#a9b0bf;
+      --accent:#22d3ee; --border:#1e293b; --card:#121a2f;
+    }
+    html,body{background:var(--bg); color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
+    a{color:var(--accent); text-decoration:none}
+    .page{display:grid; grid-template-columns:280px 1fr; gap:28px; max-width:1200px; margin:0 auto; padding:28px}
+    /* Sidebar */
+    .sidebar{background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:22px; position:sticky; top:22px; height:fit-content}
+    .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover; border:2px solid var(--border); margin-bottom:12px}
+    .name{font-family:Merriweather, serif; font-size:24px; font-weight:700; margin:6px 0}
+    .tag{color:var(--muted); font-size:14px; margin-bottom:12px}
+    .side-links a{display:block; padding:8px 0; color:var(--text)}
+    .side-links a:hover{color:#fff}
+    .pill{display:inline-block; font-size:12px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); margin:6px 6px 0 0}
+
+    /* Main */
+    .main{display:flex; flex-direction:column; gap:22px}
+    .card{background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:22px}
+    .card h2{font-family:Merriweather, serif; font-size:22px; margin:0 0 10px}
+    .lead{color:var(--muted); max-width:900px}
+    .btn{display:inline-block; padding:9px 14px; border:1px solid var(--accent); color:var(--accent); border-radius:10px; margin-top:12px}
+    .btn:hover{background:var(--accent); color:#0b1020}
+
+    /* Sections */
+    .proj-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:10px}
+    .proj{background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden}
+    .proj img{width:100%; height:160px; object-fit:cover; border-bottom:1px solid var(--border)}
+    .proj .p-body{padding:14px}
+    .proj h3{margin:0 0 6px; font-size:18px}
+    .proj p{margin:0 0 10px; color:var(--muted)}
+    .row{display:flex; gap:16px; flex-wrap:wrap}
+    .item{flex:1 1 280px; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px}
+    .item h3{margin:0 0 6px}
+    .timeline{display:grid; gap:10px}
+    .t{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px}
+    .t .when{color:var(--muted); font-size:13px; margin-bottom:4px}
+    .footer{color:var(--muted); text-align:center; padding:24px}
+
+    /* Topbar navigation like Academic */
+    .topbar{position:sticky; top:0; z-index:10; background:rgba(11,16,32,.75); backdrop-filter:blur(6px); border-bottom:1px solid var(--border)}
+    .topwrap{max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:10px 20px}
+    .brand{font-weight:800}
+    .nav a{margin-left:16px; color:var(--muted)}
+    .nav a:hover{color:#fff}
+
+    @media (max-width:900px){ .page{grid-template-columns:1fr} .sidebar{position:relative; top:auto} }
+  </style>
 </head>
 <body>
-  <!-- ===== HEADER + NAV ===== -->
-  <header>
-    <div class="nav container">
-      <a class="logo" href="#top">Mythily’s Portfolio</a>
-      <div class="nav-links">
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topwrap">
+      <div class="brand">Mythily’s Portfolio</div>
+      <div class="nav">
         <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="top">
-    <div class="container">
-      <h1>Hi, I’m Mythily Kanagaraj</h1>
-      <p class="subtitle">
-        Graduate student in AI & Business Analytics (USF) with experience as a Cloud & AI/ML Engineer.  
-        I build scalable data pipelines, deploy machine learning models, and design BI dashboards for data-driven decisions.
-      </p>
-      <a class="btn" href="#projects">See my work</a>
-    </div>
-  </section>
+  <div class="page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img class="avatar" src="assets/profile.jpg" alt="Mythily headshot">
+      <div class="name">Mythily Kanagaraj</div>
+      <div class="tag">MS — AI & Business Analytics, USF</div>
 
-  <main>
-    <!-- ===== ABOUT ===== -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I’m pursuing my MS in Artificial Intelligence & Business Analytics at the University of South Florida.  
-          My background includes building ETL/ELT data pipelines on AWS/Azure, deploying models with TensorFlow/Keras/scikit-learn,
-          and creating Tableau/Power BI dashboards for real-time monitoring and analytics.
-        </p>
-        <p>
-          I enjoy turning messy data into clear insights and production-ready apps.
-        </p>
+      <div class="side-links">
+        <a href="mailto:mythilykanagaraj21@gmail.com">📧 mythilykanagaraj21@gmail.com</a>
+        <a target="_blank" href="https://github.com/Mythily2110">🐙 github.com/Mythily2110</a>
+        <a target="_blank" href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200">🔗 LinkedIn</a>
+        <a href="#contact">📱 +1 813 323 3780</a>
       </div>
-    </section>
 
-    <!-- ===== PROJECTS ===== -->
-    <section id="projects" class="section">
-      <div class="container">
+      <div style="margin-top:12px">
+        <span class="pill">Java</span>
+        <span class="pill">Python</span>
+        <span class="pill">SQL</span>
+        <span class="pill">TensorFlow</span>
+        <span class="pill">Keras</span>
+        <span class="pill">AWS</span>
+        <span class="pill">Tableau</span>
+        <span class="pill">Power BI</span>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Hero-ish card -->
+      <section class="card" id="about">
+        <h2>About</h2>
+        <p class="lead">
+          Graduate student in Artificial Intelligence & Business Analytics at USF with experience as a Cloud & AI/ML Engineer.
+          I build scalable data pipelines, deploy ML models, and design BI dashboards that turn data into decisions.
+        </p>
+        <a class="btn" href="#projects">See Projects</a>
+      </section>
+
+      <!-- Highlights (like key achievements) -->
+      <section class="card" id="highlights">
+        <h2>Highlights</h2>
+        <div class="row">
+          <div class="item">
+            <h3>AI Chatbot (Healthcare)</h3>
+            <p>Deployed LSTM-based emotion detection (TensorFlow/Keras) on Streamlit (Hugging Face Spaces).</p>
+          </div>
+          <div class="item">
+            <h3>Retail Analytics</h3>
+            <p>Interactive Tableau dashboard + Python/SQL pipelines for segmentation, trends, and forecasting.</p>
+          </div>
+          <div class="item">
+            <h3>Cloud & BI</h3>
+            <p>AWS infra with monitoring & anomaly detection; KPI dashboards in Tableau/Power BI.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="card" id="projects">
         <h2>Projects</h2>
-        <div class="grid">
+        <div class="proj-grid">
           <!-- Project 1 -->
-          <article class="card">
-            <img src="assets/project1.png" alt="Mental Health Emotion Detection Chatbot" />
-            <h3>Mental Health Emotion Detection Chatbot</h3>
-            <p>
-              LSTM-based NLP model (TensorFlow/Keras) for multi-class emotion classification, deployed with Streamlit on Hugging Face Spaces.
-              Includes full NLP preprocessing and tuned training pipeline.
-            </p>
-            <a class="link" target="_blank" href="https://lnkd.in/gsFXy9fq">Live Demo</a>
-            <a class="link" target="_blank" href="https://lnkd.in/g6VnvT8j">View Code on GitHub</a>
+          <article class="proj">
+            <img src="assets/project1.png" alt="Emotion Detection Chatbot UI">
+            <div class="p-body">
+              <h3>Mental Health Emotion Detection Chatbot</h3>
+              <p>LSTM-based NLP model (TensorFlow/Keras), deployed with Streamlit on Hugging Face Spaces.</p>
+              <p>
+                <a target="_blank" href="https://lnkd.in/gsFXy9fq">Live Demo</a> ·
+                <a target="_blank" href="https://lnkd.in/g6VnvT8j">Code on GitHub</a>
+              </p>
+            </div>
           </article>
 
           <!-- Project 2 -->
-          <article class="card">
-            <img src="assets/project2.png" alt="Retail Customer Insights Dashboard" />
-            <h3>Retail Customer Insights Dashboard</h3>
-            <p>
-              Interactive Tableau dashboard powered by Python preprocessing and SQL pipelines for customer segmentation,
-              trend analysis, and demand forecasting. Dynamic KPIs include loyalty, purchase frequency, and revenue.
-            </p>
-            <a class="link" target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View on LinkedIn</a>
+          <article class="proj">
+            <img src="assets/project2.png" alt="Retail Customer Insights Dashboard">
+            <div class="p-body">
+              <h3>Retail Customer Insights Dashboard</h3>
+              <p>Tableau dashboard backed by Python preprocessing and SQL pipelines for KPIs & forecasting.</p>
+              <p>
+                <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View on LinkedIn</a>
+              </p>
+            </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="card">
-            <img src="assets/project3.png" alt="Cloud Security & Compliance Monitoring" />
-            <h3>Cloud Security & Compliance Monitoring</h3>
-            <p>
-              Built secure AWS infrastructure (EC2, S3, RDS, Lambda, VPC) with automated compliance tracking and real-time anomaly detection,
-              visualized in Tableau dashboards for stakeholders.
-            </p>
-            <a class="link" target="_blank" href="#">View Repository</a>
+          <!-- Optional third project slot -->
+          <article class="proj">
+            <img src="assets/project3.png" alt="Cloud Security/Compliance visualization">
+            <div class="p-body">
+              <h3>Cloud Security & Compliance Monitoring</h3>
+              <p>AWS stack (EC2, S3, RDS, Lambda, VPC) with automated compliance tracking and anomaly detection.</p>
+              <p><a target="_blank" href="#">Repository (add later)</a></p>
+            </div>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== SKILLS ===== -->
-    <section id="skills" class="section">
-      <div class="container">
+      <!-- Skills -->
+      <section class="card" id="skills">
         <h2>Skills</h2>
-        <ul class="skills">
-          <li><strong>AI/ML & Modeling:</strong> TensorFlow, Keras, PyTorch, scikit-learn, NLP, Predictive Modeling, Hugging Face</li>
-          <li><strong>Programming:</strong> Python (Pandas, NumPy, NLTK), SQL, PL/SQL</li>
-          <li><strong>Cloud & Data Engineering:</strong> AWS (EC2, S3, Lambda, CloudWatch, CloudFormation, Terraform), Azure, Snowflake, ETL/ELT</li>
-          <li><strong>Visualization & BI:</strong> Tableau, Power BI, Looker; DAX, Power Query, RLS</li>
-          <li><strong>Databases:</strong> MS SQL Server, MySQL, Oracle</li>
-        </ul>
-      </div>
-    </section>
+        <div class="row">
+          <div class="item">
+            <h3>AI/ML</h3>
+            <p>TensorFlow, Keras, PyTorch, scikit-learn, NLP, Predictive Modeling, Hugging Face</p>
+          </div>
+          <div class="item">
+            <h3>Programming</h3>
+            <p>Python (Pandas, NumPy, NLTK), SQL, PL/SQL; Java (Spring Boot basics)</p>
+          </div>
+          <div class="item">
+            <h3>Cloud & Data</h3>
+            <p>AWS (EC2, S3, Lambda, CloudWatch, CloudFormation, Terraform), Azure, Snowflake, ETL/ELT</p>
+          </div>
+          <div class="item">
+            <h3>BI & Viz</h3>
+            <p>Tableau, Power BI, Looker; DAX, Power Query, Row-Level Security</p>
+          </div>
+          <div class="item">
+            <h3>Databases</h3>
+            <p>MS SQL Server, MySQL, Oracle</p>
+          </div>
+        </div>
+      </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="section">
-      <div class="container">
+      <!-- Experience -->
+      <section class="card" id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="t">
+            <div class="when">Nov 2021 – Jul 2024 · Infosys · Cloud Engineer</div>
+            <div>Built AWS data pipelines and automated ETL (Terraform/CloudFormation/Jenkins). Implemented monitoring & anomaly detection (CloudWatch/Config/CloudTrail). Built Tableau/Power BI dashboards and DAX KPIs.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="card" id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="t">
+            <div class="when">2025–present · University of South Florida</div>
+            <div>MS, Artificial Intelligence & Business Analytics</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="card" id="contact">
         <h2>Contact</h2>
-        <p>📧 <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a></p>
-        <p>🔗 <a target="_blank" href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200">LinkedIn</a></p>
-        <p>🐙 <a target="_blank" href="https://github.com/Mythily2110">GitHub</a></p>
-        <p>📱 +1 813 323 3780</p>
-      </div>
-    </section>
-  </main>
+        <div class="row">
+          <div class="item"><strong>Email:</strong> <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a></div>
+          <div class="item"><strong>LinkedIn:</strong> <a target="_blank" href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200">linkedin.com/in/mythily-kanagaraj-474b37200</a></div>
+          <div class="item"><strong>GitHub:</strong> <a target="_blank" href="https://github.com/Mythily2110">github.com/Mythily2110</a></div>
+          <div class="item"><strong>Phone:</strong> +1 813 323 3780</div>
+        </div>
+      </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Mythily Kanagaraj • Built with HTML & CSS</p>
-  </footer>
+      <div class="footer">© <span id="year"></span> Mythily Kanagaraj</div>
+    </main>
+  </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
