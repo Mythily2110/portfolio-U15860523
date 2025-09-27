@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Mythily Kanagaraj Portfolio</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Mythily Kanagaraj</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Contact Me</h1>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">Mythily Kanagaraj</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="section">
-    <p>Email: <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200" target="_blank">linkedin.com/in/mythily-kanagaraj</a></p>
-    <p>GitHub: <a href="https://github.com/Mythily2110" target="_blank">github.com/Mythily2110</a></p>
-    <p>Phone: +1 813 323 3780</p>
-  </section>
+  <main class="container">
+    <section class="card section">
+      <h1>Contact</h1>
+      <p class="lead">Open to internships and full-time roles in Data, AI/ML, and Analytics Engineering.</p>
+      <p><strong>Email:</strong> <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a target="_blank" href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200">/in/mythily-kanagaraj-474b37200</a></p>
+      <p><strong>GitHub:</strong> <a target="_blank" href="https://github.com/Mythily2110">github.com/Mythily2110</a></p>
+      <p><strong>Phone:</strong> +1 813 323 3780</p>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Mythily Kanagaraj</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
