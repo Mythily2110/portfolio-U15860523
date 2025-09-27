@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mythily Kanagaraj | AI & Analytics Portfolio</title>
+  <title>Mythily Kanagaraj | AI & Business Analytics Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- HEADER / NAV -->
   <header>
-    <h1>Mythily Kanagaraj</h1>
-    <p class="tagline">AI & Business Analytics Portfolio</p>
+    <h1 class="logo">Mythily <span class="grad">Kanagaraj</span></h1>
+    <p class="subtitle">AI & Business Analytics Portfolio</p>
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -19,17 +21,94 @@
     </nav>
   </header>
 
-  <section class="section">
-    <h2>Welcome</h2>
-    <p>
-      I’m a driven Data & AI professional passionate about transforming complex datasets into actionable insights. 
-      Currently pursuing my MS in Artificial Intelligence & Business Analytics at the University of South Florida, 
-      I specialize in <strong>machine learning, cloud engineering, and business intelligence solutions</strong>. 
-    </p>
-    <p>
-      My work bridges the gap between advanced analytics and practical business impact — from deploying predictive 
-      models to building dashboards used by decision-makers.
-    </p>
-  </section>
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero card">
+      <p class="eyebrow">Portfolio</p>
+      <h2 class="hero-title">
+        Turning Data into <span class="grad">Decisions</span>
+      </h2>
+
+      <p class="hero-lead">
+        I’m a driven Data & AI professional passionate about transforming complex datasets into 
+        <strong>actionable insights</strong>. Currently pursuing my MS in 
+        <strong>Artificial Intelligence & Business Analytics at the University of South Florida</strong>, 
+        I specialize in <strong>machine learning</strong>, <strong>cloud engineering</strong>, and 
+        <strong>business intelligence solutions</strong>.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn" href="projects.html">Explore Projects</a>
+        <a class="btn ghost" href="about.html">Learn More</a>
+      </div>
+
+      <div class="pillset">
+        <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">TensorFlow</span>
+        <span class="pill">Keras</span><span class="pill">AWS</span><span class="pill">Tableau</span>
+        <span class="pill">Power BI</span><span class="pill">NLP</span>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="num">2+</div>
+          <div class="label">Years in Cloud/AI</div>
+        </div>
+        <div class="stat">
+          <div class="num">10+</div>
+          <div class="label">Dashboards Built</div>
+        </div>
+        <div class="stat">
+          <div class="num">6</div>
+          <div class="label">ML/NLP Models</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        
+        <article class="card">
+          <h3>Mental Health Emotion Detection Chatbot</h3>
+          <p>
+            Deep-learning (LSTM) classifier that predicts emotions from text. 
+            Real-time app deployed with Streamlit on Hugging Face Spaces.
+          </p>
+          <div class="tags">
+            <span>NLP</span><span>TensorFlow</span><span>Keras</span><span>Streamlit</span>
+          </div>
+          <p>
+            <a class="btn" target="_blank" href="https://lnkd.in/gsFXy9fq">Live Demo</a>
+            <a class="btn ghost" target="_blank" href="https://lnkd.in/g6VnvT8j">View Code</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Retail Customer Insights Dashboard</h3>
+          <p>
+            Interactive Tableau dashboard surfacing purchase behavior, shipping preferences, 
+            and loyalty gaps to guide retention strategy.
+          </p>
+          <div class="tags">
+            <span>Tableau</span><span>Python</span><span>SQL</span>
+          </div>
+          <p>
+            <a class="btn ghost" target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View Dashboard</a>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Mythily Kanagaraj | AI & Business Analytics Portfolio</p>
+  </footer>
+
 </body>
 </html>
