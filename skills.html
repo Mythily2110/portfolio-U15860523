@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills | Mythily Kanagaraj Portfolio</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills — Mythily Kanagaraj</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Skills</h1>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">Mythily Kanagaraj</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="section grid">
-    <div class="card"><h3>AI & ML</h3><p>TensorFlow, Keras, scikit-learn, NLP, predictive analytics</p></div>
-    <div class="card"><h3>Programming</h3><p>Python, SQL, Pandas, REST APIs, data wrangling</p></div>
-    <div class="card"><h3>Cloud</h3><p>AWS (S3, Lambda, EC2), Azure (ADF, Synapse), CI/CD pipelines</p></div>
-    <div class="card"><h3>Business Intelligence</h3><p>Tableau, Power BI, DAX, Power Query, KPI dashboards</p></div>
-  </section>
+  <main class="container">
+    <section class="section">
+      <h1>Skills</h1>
+      <div class="grid">
+        <article class="card">
+          <h3>AI & ML</h3>
+          <div class="tags"><span>TensorFlow</span><span>Keras</span><span>scikit-learn</span><span>NLP</span></div>
+          <p>Predictive modeling, sequence models, evaluation, deployment.</p>
+        </article>
+        <article class="card">
+          <h3>Programming & Data</h3>
+          <div class="tags"><span>Python</span><span>SQL</span><span>Pandas</span><span>APIs</span></div>
+          <p>Data wrangling, automation, reproducible analytics.</p>
+        </article>
+        <article class="card">
+          <h3>Cloud & Data Eng</h3>
+          <div class="tags"><span>AWS</span><span>Azure</span><span>Snowflake</span><span>ETL/ELT</span></div>
+          <p>Pipelines with S3, EC2, Lambda, ADF; Terraform & CI/CD.</p>
+        </article>
+        <article class="card">
+          <h3>Business Intelligence</h3>
+          <div class="tags"><span>Tableau</span><span>Power BI</span><span>DAX</span><span>Power Query</span></div>
+          <p>Executive dashboards, KPI design, storytelling.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Mythily Kanagaraj</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
