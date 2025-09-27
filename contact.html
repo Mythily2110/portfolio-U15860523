@@ -35,42 +35,6 @@
       </ul>
     </section>
 
-    <!-- Working form via FormSubmit (no account required) -->
-    <section class="card">
-      <h3>Send a Message</h3>
-
-      <!--
-        How it works:
-        - This posts to FormSubmit which emails the message to you.
-        - The first time you submit, FormSubmit emails you a verification link.
-        - After you verify once, future submissions go straight to your inbox.
-      -->
-      <form action="https://formsubmit.co/mythilykanagaraj@gmail.com" method="POST" class="contact-form">
-        <!-- FormSubmit options (hidden) -->
-        <input type="hidden" name="_subject" value="Portfolio Contact — Mythily Kanagaraj">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <!-- After submit, go to a local thank-you page -->
-        <input type="hidden" name="_next" value="thanks.html">
-
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="5" required></textarea>
-
-        <button type="submit" class="btn">Send</button>
-      </form>
-
-      <p class="muted" style="margin-top:10px;">
-        Tip: If this is your first time contacting me through the form, you’ll receive a short verification email from FormSubmit.
-        Click the link once—after that, messages will deliver directly.
-      </p>
-    </section>
-
   </main>
 
   <!-- Footer -->
