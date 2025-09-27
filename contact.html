@@ -1,32 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Mythily Kanagaraj</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Header -->
   <header class="site-header">
-    <h1 class="site-title">Contact</h1>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a class="active" href="contact.html">Contact</a>
-    </nav>
+    <div class="header-inner">
+      <h1 class="site-title">Contact</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
+  <!-- Main -->
   <main class="container">
-    <section class="content">
-      <p>Email: <a href="mailto:Sravankumartalishetti95@gmail.com">Sravankumartalishetti95@gmail.com</a></p>
-      <p>Phone: +1 813-388-3837</p>
-      <p>LinkedIn: <a target="_blank" href="https://linkedin.com/in/sravankumar-talishetti">linkedin.com/in/sravankumar-talishetti</a></p>
+
+    <!-- Direct contacts -->
+    <section class="card content">
+      <h2>Get in Touch</h2>
+      <p>I’m happy to connect about data, AI/ML, analytics, and opportunities to collaborate.</p>
+
+      <ul class="contact-list">
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a>
+        </li>
+        <li>
+          <strong>Phone:</strong>
+          <a href="tel:+18133233780">+1&nbsp;813&nbsp;323&nbsp;3780</a>
+        </li>
+        <li>
+          <strong>LinkedIn:</strong>
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/mythilykanagaraj">linkedin.com/in/mythilykanagaraj</a>
+        </li>
+      </ul>
+
+      <!-- Source: pulled from resume -->
+      <small class="muted">Contact details taken from my current resume. :contentReference[oaicite:0]{index=0}</small>
     </section>
+
+    <!-- Optional contact form (kept simple) -->
+    <section class="card content">
+      <h2>Send a Message</h2>
+      <form action="https://formspree.io/f/your-endpoint" method="POST">
+        <div class="grid">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+        </div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <p class="muted" style="margin-top:.5rem;">
+        Tip: Replace <code>https://formspree.io/f/your-endpoint</code> with your own form handler or remove this form if you prefer email/phone only.
+      </p>
+    </section>
+
   </main>
 
-  <footer class="site-footer">© <script>document.write(new Date().getFullYear())</script> Mythily Kanagaraj</footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    &copy; <script>document.write(new Date().getFullYear())</script> Mythily Kanagaraj
+  </footer>
+
 </body>
 </html>
