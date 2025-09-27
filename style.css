@@ -1,127 +1,61 @@
-/* ==============================
-   LIGHT THEME • Times New Roman
-   Centered hero • Professional UI
-   ============================== */
+/* ======= Mythily overrides (light theme + Times New Roman) ======= */
 
-/* Palette (change here if you want a different accent) */
+/* 1) Font */
+html { font-family: "Times New Roman", Times, serif; }
+
+/* 2) Light palette (only variables; rest of the file keeps working) */
 :root{
-  --bg:#f7fafc;             /* page background (very light)   */
-  --panel:#ffffff;          /* header/footer white            */
-  --card:#ffffff;           /* card white                     */
-  --text:#1f2937;           /* dark slate text                */
-  --muted:#4b5563;          /* secondary text                 */
-  --accent:#0ea5e9;         /* sky blue accent                */
-  --accent-2:#14b8a6;       /* teal accent (subtle usage)     */
-  --border:#e5e7eb;         /* light border                   */
-  --shadow:0 10px 30px rgba(31,41,55,.08);
+  /* base surface colors */
+  --smoky-black: hsl(0, 0%, 98%);         /* page background */
+  --eerie-black-2: hsl(0, 0%, 100%);      /* cards/sections */
+  --eerie-black-1: hsl(0, 0%, 100%);      /* inner surfaces */
+  --onyx: hsl(0, 0%, 96%);                /* subtle fills */
+  --jet: hsl(0, 0%, 88%);                 /* borders */
+
+  /* text colors */
+  --white-2: hsl(222, 47%, 11%);          /* headings (dark) */
+  --white-1: hsl(222, 20%, 28%);          /* badges/labels */
+  --light-gray: hsl(222, 15%, 35%);       /* body text */
+  --light-gray-70: hsla(222, 15%, 35%, .7);
+
+  /* accent (sky blue + warm gold) */
+  --orange-yellow-crayola: hsl(199, 92%, 45%);   /* primary accent */
+  --vegas-gold: hsl(35, 64%, 50%);
+
+  /* gradients re-tinted for light UI */
+  --bg-gradient-onyx: linear-gradient(to bottom right, #f6fafe 0%, #ffffff 100%);
+  --bg-gradient-jet:  linear-gradient(to bottom right, #ffffff 0%, #f7f7f9 100%), #ffffff;
+  --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(199, 92%, 45%) 0%, hsla(199, 92%, 45%, 0) 60%);
+  --bg-gradient-yellow-2: linear-gradient(135deg, hsla(199, 92%, 45%, .18) 0%, hsla(199, 92%, 45%, 0) 60%), #ffffff;
+  --border-gradient-onyx: linear-gradient(to bottom right, #e7ebf0 0%, rgba(231,235,240,0) 50%);
+  --text-gradient-yellow: linear-gradient(to right, hsl(199, 92%, 45%), hsl(35, 100%, 60%));
+
+  /* softened shadows for light mode */
+  --shadow-1: 0 6px 18px rgba(16, 24, 40, 0.08);
+  --shadow-2: 0 10px 24px rgba(16, 24, 40, 0.08);
+  --shadow-3: 0 14px 32px rgba(16, 24, 40, 0.10);
+  --shadow-4: 0 18px 40px rgba(16, 24, 40, 0.08);
+  --shadow-5: 0 24px 60px rgba(16, 24, 40, 0.10);
 }
 
-*{box-sizing:border-box}
-html,body{margin:0}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:"Times New Roman", Times, serif;
-  line-height:1.65;
+/* 3) Small tweaks so light mode reads well */
+.navbar{
+  background: rgba(255,255,255,.8);
+  border-color: var(--jet);
+  backdrop-filter: blur(10px);
 }
+.navbar-link{ color: var(--light-gray); }
+.navbar-link.active{ color: var(--orange-yellow-crayola); }
 
-/* --------------- Header --------------- */
-.site-header{
-  position:sticky; top:0; z-index:10;
-  background:var(--panel);
-  border-bottom:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-.header-inner{
-  max-width:1100px; margin:0 auto; padding:18px;
-  display:flex; flex-direction:column; align-items:center; gap:8px;
-  text-align:center;
-}
-.site-title{
-  margin:0;
-  font-size:clamp(28px,4vw,40px);
-  letter-spacing:.2px;
-}
-.site-subtitle{
-  margin:0; color:var(--muted); font-size:clamp(14px,2vw,18px);
-}
-.nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:8px}
-.nav a{
-  display:inline-block; padding:8px 14px; border-radius:12px;
-  background:#f3f4f6; color:var(--text); border:1px solid var(--border);
-}
-.nav a:hover{ background:#eaf6ff; border-color:#bfe9ff }
-.nav .active{ outline:2px solid var(--accent) }
+.article-title::after{ background: var(--text-gradient-yellow); }
+.project-item-icon-box{ background:#eaf2ff; color:#0b6bbf; }
 
-/* --------------- Layout --------------- */
-.container{max-width:1100px; margin:0 auto; padding:26px 18px}
-.section{margin:22px 0}
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:24px;
-  box-shadow:var(--shadow);
-  animation:fade .35s ease both;
-}
-.section-title{margin:0 0 10px; font-size:22px}
+/* Map: remove invert used for dark mode */
+.mapbox iframe{ filter: none; }
 
-/* --------------- Hero --------------- */
-.hero{ text-align:center }
-.eyebrow{
-  text-transform:uppercase; letter-spacing:.14em; color:var(--muted);
-  font-size:13px; margin-bottom:6px;
+/* Inputs look better on light */
+.form-input{
+  color: var(--white-2);
+  background: #fff;
+  border-color: var(--jet);
 }
-.hero-title{ font-size:clamp(24px,4.2vw,36px); margin:0 0 8px }
-.hero-lead{ color:var(--muted); max-width:860px; margin:6px auto 14px; font-size:18px }
-.cta-row{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin:8px 0 16px }
-
-/* Buttons */
-.btn{
-  display:inline-block; padding:10px 18px; border-radius:12px;
-  background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  color:#ffffff; border:1px solid transparent; font-weight:700;
-  transition:transform .15s ease, opacity .15s ease;
-}
-.btn:hover{ transform:translateY(-2px) }
-.btn.outline{
-  background:transparent; color:var(--accent); border-color:var(--accent)
-}
-.btn.small{ padding:8px 14px; font-weight:600 }
-
-/* Chips (skills + stats) */
-.chip-row{
-  display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
-  margin-top:6px;
-}
-.chip{
-  display:inline-block; background:#f3faff; color:#0c3c52;
-  border:1px solid #cfeefd; border-radius:999px;
-  padding:8px 12px; font-size:15px;
-}
-.chip-row.subdued .chip{
-  background:#f5f5f5; border-color:#e6e6e6; color:#374151;
-}
-
-/* --------------- Grid / Cards --------------- */
-.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px }
-.tags{ display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 }
-.tags span{
-  display:inline-block; padding:6px 10px; border-radius:999px;
-  background:#eef2ff; color:#1e3a8a; border:1px solid #dbeafe; font-size:13px;
-}
-
-/* --------------- Footer --------------- */
-.site-footer{
-  text-align:center; padding:20px; margin-top:22px;
-  background:var(--panel); border-top:1px solid var(--border); color:#6b7280
-}
-
-/* --------------- Responsive --------------- */
-@media (max-width:720px){
-  .container{ padding:20px 14px }
-  .card{ padding:20px }
-}
-
-/* --------------- Animation --------------- */
-@keyframes fade{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)}}
