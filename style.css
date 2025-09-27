@@ -1,6 +1,6 @@
 /* =============  THEME (Olive / Leaf)  ============= */
 :root{
-  --bg:#f7faf7;          /* page background (very light leaf) */
+  --bg:#f7faf7;          /* very light leaf */
   --panel:#ecf3ec;       /* header/footer strip */
   --card:#ffffff;        /* cards */
   --text:#1b1f1b;        /* primary text */
@@ -33,7 +33,7 @@ a:hover{opacity:.92}
 .header-inner{
   max-width:1100px; margin:0 auto;
   padding:28px 16px;
-  text-align:center;               /* CENTER EVERYTHING */
+  text-align:center;
 }
 .site-title{
   margin:0;
@@ -66,7 +66,7 @@ a:hover{opacity:.92}
   border-color:var(--accent);
 }
 
-/* ===== Layout ===== */
+/* ===== Layout / Cards ===== */
 .container{max-width:1100px; margin:0 auto; padding:26px 16px}
 .section{margin:22px 0}
 .card{
@@ -84,12 +84,8 @@ a:hover{opacity:.92}
   font-size:.8rem;
   margin:0 0 6px;
 }
-.hero-title{
-  margin:0 0 10px;
-  color:var(--accent-2);
-  font-size:2rem;
-}
-.hero-lead{margin:10px 0 6px;}
+h2,h3,h4{color:var(--accent)}
+.lead{color:var(--text)}
 
 /* Buttons */
 .btn{
@@ -106,10 +102,10 @@ a:hover{opacity:.92}
   color:var(--accent);
 }
 
-/* Chips (skills) */
+/* Chips (skills / tags) */
 .chip-row{
   display:flex; flex-wrap:wrap; gap:10px;
-  justify-content:center; margin-top:12px;
+  justify-content:flex-start; margin-top:6px;
 }
 .chip{
   padding:6px 12px; border-radius:999px;
@@ -117,6 +113,7 @@ a:hover{opacity:.92}
   border:1px solid var(--border);
   font-size:.92rem;
 }
+.chip-row.center{justify-content:center}
 .chip-row.subdued .chip{
   background:#f1f6f1; color:var(--muted);
 }
@@ -128,8 +125,12 @@ a:hover{opacity:.92}
   border:1px solid var(--border); color:var(--muted); background:#f7fbf7;
 }
 
-/* Grid for Featured Projects */
+/* Grid */
 .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px}
+
+/* Lists */
+.clean-list{margin:0; padding-left:18px}
+.clean-list li{margin:6px 0}
 
 /* Footer */
 .site-footer{
@@ -139,3 +140,14 @@ a:hover{opacity:.92}
   text-align:center;
   padding:20px; margin-top:20px;
 }
+
+/* Contact form (optional non-email) */
+.form{
+  display:grid; gap:12px; max-width:640px;
+}
+input, textarea{
+  width:100%; padding:12px 14px; border-radius:8px;
+  border:1px solid var(--border); background:#fff; color:var(--text);
+  font-family:"Times New Roman", Times, serif;
+}
+textarea{min-height:120px; resize:vertical}
