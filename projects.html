@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Mythily Kanagaraj</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=olive1" />
 </head>
 <body>
-  <header class="header">
-    <div class="wrap">
-      <div class="brand">Mythily Kanagaraj</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+
+<header class="site-header">
+  <div class="header-inner">
+    <h1 class="site-title">Mythily Kanagaraj</h1>
+    <p class="site-subtitle">AI &amp; Business Analytics Portfolio</p>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Highlighted Work</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>Mental Health Emotion Detection Chatbot</h3>
+        <p>
+          NLP application that classifies emotions from free-text input using an LSTM model.
+          Deployed with Streamlit for quick, interactive inference and packaged so
+          non-technical users can try it directly.
+        </p>
+        <div class="tags">
+          <span>NLP</span><span>TensorFlow</span><span>Keras</span><span>Streamlit</span>
+        </div>
+        <p>
+          <a class="btn" target="_blank"
+             href="https://www.linkedin.com/feed/update/urn:li:activity:7363748293010444289/">Live Demo</a>
+          <a class="btn outline" target="_blank" href="https://lnkd.in/g6VnvT8j">View Code</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Retail Customer Insights Dashboard</h3>
+        <p>
+          Executive Tableau dashboard surfacing purchase behavior, shipping preferences, and loyalty gaps.
+          Built to support merchandising and retention decisions with a concise, actionable story.
+        </p>
+        <div class="tags">
+          <span>Tableau</span><span>Python</span><span>SQL</span>
+        </div>
+        <p>
+          <a class="btn outline" target="_blank"
+             href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View Dashboard</a>
+        </p>
+      </article>
+
     </div>
-  </header>
+  </section>
+</main>
 
-  <main class="container">
-    <section class="section">
-      <h1>Projects</h1>
-      <div class="grid">
-        <article class="card">
-          <h3>Mental Health Emotion Detection Chatbot</h3>
-          <p>LSTM-based classifier with full preprocessing & tuned training. Real-time inference via Streamlit on Hugging Face Spaces.</p>
-          <div class="tags"><span>NLP</span><span>TensorFlow</span><span>Keras</span><span>Streamlit</span></div>
-          <p><a class="btn" target="_blank" href="https://lnkd.in/gsFXy9fq">Live Demo</a>
-             <a class="btn ghost" target="_blank" href="https://lnkd.in/g6VnvT8j">Code</a></p>
-        </article>
-
-        <article class="card">
-          <h3>Retail Customer Insights Dashboard</h3>
-          <p>Consolidated customer metrics, shipping preferences, and loyalty gaps; enabled targeted promo strategy.</p>
-          <div class="tags"><span>Tableau</span><span>Python</span><span>SQL</span></div>
-          <p><a class="btn ghost" target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View</a></p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">© <span id="year"></span> Mythily Kanagaraj</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<footer class="site-footer">
+  © <script>document.write(new Date().getFullYear())</script> Mythily Kanagaraj
+</footer>
 </body>
 </html>
