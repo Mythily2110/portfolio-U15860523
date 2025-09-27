@@ -11,7 +11,8 @@
   <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <h1 class="site-title">Contact</h1>
+      <h1 class="site-title">Mythily Kanagaraj</h1>
+      <p class="site-subtitle">AI &amp; Business Analytics Portfolio</p>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -25,60 +26,37 @@
   <!-- Main -->
   <main class="container">
 
-    <!-- Direct contacts -->
-    <section class="card content">
-      <h2>Get in Touch</h2>
-      <p>I’m happy to connect about data, AI/ML, analytics, and opportunities to collaborate.</p>
-
-      <ul class="contact-list">
-        <li>
-          <strong>Email:</strong>
-          <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a>
-        </li>
-        <li>
-          <strong>Phone:</strong>
-          <a href="tel:+18133233780">+1&nbsp;813&nbsp;323&nbsp;3780</a>
-        </li>
-        <li>
-          <strong>LinkedIn:</strong>
-          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/mythilykanagaraj">linkedin.com/in/mythilykanagaraj</a>
-        </li>
+    <section class="card">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>You can reach me directly at:</p>
+      <ul>
+        <li><strong>Email:</strong> mythilykanagaraj@gmail.com</li>
+        <li><strong>Phone:</strong> +1 (813) 388-3837</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mythilykanagaraj" target="_blank">linkedin.com/in/mythilykanagaraj</a></li>
       </ul>
-
-      <!-- Source: pulled from resume -->
-      <small class="muted">Contact details taken from my current resume. :contentReference[oaicite:0]{index=0}</small>
     </section>
 
-    <!-- Optional contact form (kept simple) -->
-    <section class="card content">
-      <h2>Send a Message</h2>
-      <form action="https://formspree.io/f/your-endpoint" method="POST">
-        <div class="grid">
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-        </div>
+    <section class="card">
+      <h3>Send a Message</h3>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="_replyto" id="email" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea name="message" id="message" rows="5" required></textarea>
 
-        <button class="btn" type="submit">Send</button>
+        <button type="submit" class="btn">Send</button>
       </form>
-      <p class="muted" style="margin-top:.5rem;">
-        Tip: Replace <code>https://formspree.io/f/your-endpoint</code> with your own form handler or remove this form if you prefer email/phone only.
-      </p>
     </section>
 
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    &copy; <script>document.write(new Date().getFullYear())</script> Mythily Kanagaraj
+    © <script>document.write(new Date().getFullYear())</script> Mythily Kanagaraj
   </footer>
 
 </body>
