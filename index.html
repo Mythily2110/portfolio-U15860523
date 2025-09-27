@@ -1,330 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mythily Kanagaraj - Personal Portfolio</title>
-
-  <!-- favicon -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!-- custom css -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- google font (kept from the template you chose) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mythily Kanagaraj — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Mythily Kanagaraj — AI & Business Analytics Portfolio" />
 </head>
-
 <body>
 
-  <main>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <!-- replace this image file with your headshot (keep the path/name if you like) -->
-          <img src="./assets/images/my-avatar.png" alt="Mythily Kanagaraj" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Mythily Kanagaraj">Mythily Kanagaraj</h1>
-          <p class="title">Data &amp; AI / Business Analytics</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
+  <!-- ===== Header (centered brand + tagline + nav) ===== -->
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Mythily Kanagaraj</h1>
+        <p class="tagline">AI &amp; Business Analytics Portfolio</p>
       </div>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:mythilykanagaraj21@gmail.com" class="contact-link">mythilykanagaraj21@gmail.com</a>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-              <a href="tel:+18133233780" class="contact-link">+1 (813) 323-3780</a>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-              <span>—</span>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Tampa, Florida, USA</address>
-            </div>
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200" target="_blank" class="social-link" aria-label="LinkedIn">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://github.com/Mythily2110" target="_blank" class="social-link" aria-label="GitHub">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-    </aside>
-
-    <!-- main-content -->
-    <div class="main-content">
-
-      <!-- NAVBAR -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-        </ul>
+      <nav class="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </nav>
+    </div>
+  </header>
 
-      <!-- ABOUT -->
-      <article class="about active" data-page="about">
+  <main id="home" class="container">
+    <!-- ===== Hero / Intro (centered) ===== -->
+    <section class="section hero">
+      <h2 class="h1">Welcome</h2>
+      <p class="lead">
+        I’m a graduate student in <strong>Artificial Intelligence &amp; Business Analytics</strong> (USF),
+        experienced in building <strong>ETL/ELT pipelines</strong>, deploying <strong>ML/NLP models</strong>,
+        and creating <strong>Tableau/Power BI</strong> dashboards that turn data into decisions.
+      </p>
+    </section>
 
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
+    <!-- ===== About ===== -->
+    <section id="about" class="section card">
+      <h3 class="h2">About Me</h3>
+      <p>
+        I work across <strong>AWS &amp; Azure</strong>, <strong>Python/SQL</strong>, and <strong>business intelligence</strong>.
+        My focus is delivering production-ready analytics: from data engineering and model deployment to clear dashboard stories for stakeholders.
+      </p>
+    </section>
 
-        <section class="about-text">
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <h3 class="h2">Featured Projects</h3>
+
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card">
+          <h4>Mental Health Emotion Detection Chatbot</h4>
           <p>
-            Graduate student in <strong>Artificial Intelligence &amp; Business Analytics</strong> at the University of South Florida with hands-on experience as a Cloud &amp; AI/ML Engineer. I build scalable
-            <strong>ETL/ELT data pipelines</strong>, deploy <strong>ML/NLP models</strong> (TensorFlow, Keras, scikit-learn), and create
-            <strong>Tableau/Power BI</strong> dashboards for real-time monitoring and decision support.
+            LSTM-based NLP model that predicts emotions from text; deployed with Streamlit (Hugging Face Spaces).
           </p>
+          <div class="tags">
+            <span>NLP</span><span>TensorFlow</span><span>Keras</span><span>Streamlit</span>
+          </div>
+          <p class="actions">
+            <a class="btn" target="_blank"
+               href="https://www.linkedin.com/feed/update/urn:li:activity:7363748293010444289/">View Project</a>
+            <a class="btn ghost" target="_blank" href="https://lnkd.in/g6VnvT8j">View Code</a>
+          </p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card">
+          <h4>Retail Customer Insights Dashboard</h4>
           <p>
-            Skilled across <strong>AWS &amp; Azure</strong>, <strong>Python/SQL</strong>, and BI, with work in anomaly detection, compliance analytics, and
-            cloud-enabled visualization for enterprise and research applications. I enjoy turning messy data into
-            production-ready insights and clear stories for stakeholders. <!-- CV source -->
+            Executive Tableau dashboard highlighting purchase patterns, shipping preferences, and loyalty gaps.
           </p>
-        </section>
-
-        <!-- service -->
-        <section class="service">
-          <h3 class="h3 service-title">What I'm doing</h3>
-
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Data engineering icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud Data Engineering</h4>
-                <p class="service-item-text">
-                  Scalable ETL/ELT on AWS &amp; Azure with Terraform/CloudFormation, built for analytics and ML workloads.
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="ML & NLP icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">ML &amp; NLP</h4>
-                <p class="service-item-text">
-                  TensorFlow/Keras models, preprocessing pipelines, and real-time deployment (e.g., Streamlit/Spaces).
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="BI dashboards icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">BI Dashboards</h4>
-                <p class="service-item-text">
-                  KPI storytelling in Tableau &amp; Power BI (DAX, time intelligence) for fast, data-driven decisions.
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="Monitoring icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Monitoring &amp; Analytics</h4>
-                <p class="service-item-text">
-                  Real-time monitoring and anomaly detection using CloudWatch/Config/CloudTrail with analytics views.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- testimonials (kept from template) -->
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-          <ul class="testimonials-list has-scrollbar">
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Colleague feedback" width="60" data-testimonials-avatar>
-                </figure>
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Colleague</h4>
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>Mythily is detail-oriented and turns complex data problems into straightforward, reliable solutions.</p>
-                </div>
-              </div>
-            </li>
-            <!-- You can duplicate more items if you want -->
-          </ul>
-        </section>
-
-        <!-- testimonials modal (kept) -->
-        <div class="modal-container" data-modal-container>
-          <div class="overlay" data-overlay></div>
-          <section class="testimonials-modal">
-            <button class="modal-close-btn" data-modal-close-btn><ion-icon name="close-outline"></ion-icon></button>
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Colleague" width="80" data-modal-img>
-              </figure>
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-            <div class="modal-content">
-              <h4 class="h3 modal-title" data-modal-title>Colleague</h4>
-              <time datetime="2025-01-01">2025</time>
-              <div data-modal-text>
-                <p>Mythily consistently builds dependable data products and communicates insights clearly to stakeholders.</p>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <!-- clients (kept from template) -->
-        <section class="clients">
-          <h3 class="h3 clients-title">Clients</h3>
-          <ul class="clients-list has-scrollbar">
-            <li class="clients-item"><a href="#"><img src="./assets/images/logo-1-color.png" alt="client logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="./assets/images/logo-2-color.png" alt="client logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="./assets/images/logo-3-color.png" alt="client logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="./assets/images/logo-4-color.png" alt="client logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="./assets/images/logo-5-color.png" alt="client logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="./assets/images/logo-6-color.png" alt="client logo"></a></li>
-          </ul>
-        </section>
-
-      </article>
-
-      <!-- RESUME -->
-      <article class="resume" data-page="resume">
-
-        <header><h2 class="h2 article-title">Resume</h2></header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Education</h3>
+          <div class="tags">
+            <span>Tableau</span><span>Python</span><span>SQL</span>
           </div>
+          <p class="actions">
+            <a class="btn ghost" target="_blank"
+               href="https://www.linkedin.com/feed/update/urn:li:activity:7358229900002021383/">View Dashboard</a>
+          </p>
+        </article>
+      </div>
+    </section>
 
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">University of South Florida — MS, AI &amp; Business Analytics</h4>
-              <span>Jan 2025 — Present</span>
-              <p class="timeline-text">
-                Graduate study in AI/ML, data engineering, and decision analytics; coursework and projects spanning
-                NLP, predictive modeling, and BI. <!-- CV source -->
-              </p>
-            </li>
-          </ol>
-        </section>
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section card">
+      <h3 class="h2">Skills</h3>
+      <div class="tags big">
+        <span>Python</span><span>SQL</span><span>TensorFlow</span><span>Keras</span>
+        <span>NLP</span><span>Tableau</span><span>Power&nbsp;BI</span>
+        <span>AWS</span><span>Azure</span><span>ETL/ELT</span>
+      </div>
+    </section>
 
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
-            <h3 class="h3">Experience</h3>
-          </div>
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section card">
+      <h3 class="h2">Contact</h3>
+      <p>Email: <a href="mailto:mythilykanagaraj21@gmail.com">mythilykanagaraj21@gmail.com</a></p>
+      <p>LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200">mythily-kanagaraj-474b37200</a></p>
+      <p>GitHub: <a target="_blank" href="https://github.com/Mythily2110">Mythily2110</a></p>
+      <p>Location: Tampa, Florida, USA</p>
+    </section>
+  </main>
 
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Cloud Engineer — Infosys</h4>
-              <span>Nov 2021 — Jul 2024</span>
-              <p class="timeline-text">
-                • Engineered cloud-based data pipelines on AWS for AI/ML workloads and analytics.<br>
-                • Automated ETL with Terraform/CloudFormation/Jenkins to improve data quality and provisioning.<br>
-                • Implemented real-time monitoring &amp; anomaly detection (CloudWatch, Config, CloudTrail).<br>
-                • Built Tableau &amp; Power BI dashboards (with DAX) for KPI tracking and decision-making. <!-- CV source -->
-              </p>
-            </li>
-          </ol>
-        </section>
+  <footer class="footer">
+    © <span id="year"></span> Mythily Kanagaraj
+  </footer>
 
-        <section class="skill">
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">Python &amp; SQL</h5><data value="85">85%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">TensorFlow / Keras / NLP</h5><data value="80">80%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">AWS &amp; Azure (ETL/ELT)</h5><data value="80">80%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">Tableau / Power BI (DAX)</h5><data value="85">85%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
-            </li>
-          </ul>
-        </section>
-
-      </article>
-
-      <!-- PORTFOLIO -->
-      <article class="portfolio" data-page="portfolio">
-
-        <header><h2 class="h2 article-title">Portfolio</h2></header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-            <li class="filter-item"><button data-filter-btn>AI / NLP</button></li>
-            <li class="filter-item"><button data-filter-btn>Dashboards</button></li>
-            <li class="filter-item"><b
+  <script>
+    // highlight active nav on click + smooth scrolling
+    document.querySelectorAll('.nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        document.querySelectorAll('.nav a').forEach(n=>n.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
